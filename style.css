@@ -1,0 +1,116 @@
+:root {
+  /* Sleek dark gradient theme matching your screenshot */
+  --bg-gradient: linear-gradient(135deg, #12160a 0%, #1c1c16 100%);
+  --card-bg: #000000;
+  --text-color: #ffffff;
+  --sub-text: #a1a1aa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 580px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.bio {
+  font-size: 15px;
+  color: var(--sub-text);
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.section-title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #52525b;
+  margin-bottom: 12px;
+  text-align: left;
+  padding-left: 4px;
+  font-weight: 600;
+}
+
+.links-group {
+  margin-bottom: 24px;
+}
+
+.link-card {
+  display: grid;
+  /* 3 columns: Left icon space, centered text, right side balance space */
+  grid-template-columns: 48px 1fr 48px;
+  align-items: center;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 16px;
+  margin-bottom: 14px;
+  font-weight: 500;
+  font-size: 16px;
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease;
+  min-height: 72px; /* Gives it that spacious look from the image */
+}
+
+.link-card:hover {
+  transform: scale(1.02);
+  background-color: #0a0a0a;
+}
+
+/* Far-left brand icon styling */
+.link-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 8px; /* Slightly rounded edges just like the screenshot */
+  justify-self: start;
+}
+
+/* Centers the text within the grid column */
+.link-text {
+  grid-column: 2;
+  text-align: center;
+}
+
+.footer {
+  margin-top: 40px;
+  font-size: 12px;
+  color: #52525b;
+}
